@@ -16,7 +16,7 @@ export const MainLayout = () => {
       start={[0, 0.2]}
       style={styles.graditen}
     >
-      <View>
+      <View style={styles.wrapper}>
         <Navbar title={"Todo App!"} />
         <View style={styles.container}>
           { todoId ? <TodoScreen /> : <MainScreen /> }
@@ -31,6 +31,10 @@ const styles = StyleSheet.create({
     paddingHorizontal: THEME.PADDING_HORIZONTAL,
     paddingVertical: 20,
     margin: 10,
+    flex: 1
+  },
+  wrapper: {
+    flex: 1
   },
   graditen: {
     flex: 1,
